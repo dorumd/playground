@@ -1,8 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace InventorySystem\Adapter\Symfony\Web\Presenter;
-
+namespace InventorySystem\Adapter\Symfony\Web\Request;
 
 use InventorySystem\UseCase\Product\AddProductRequest;
 
@@ -34,5 +33,21 @@ class AddProductRequestWeb implements AddProductRequest
     public function getProductId(): string
     {
         return $this->productId;
+    }
+
+    /**
+     * @param string $productId
+     * @param string $json
+     * @return AddProductRequestWeb
+     */
+    public static function fromJsonData(string $productId, string $json): self
+    {
+        $data = json_decode($json, true);
+
+        return new self(
+            $productId,
+            $data['title'] ?? '',
+            $data['ean'] ?? ''
+        );
     }
 }

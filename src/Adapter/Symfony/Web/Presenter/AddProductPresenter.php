@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace InventorySystem\Adapter\Symfony\Web\Presenter;
 
 use InventorySystem\Adapter\Storage\InMemoryProductRepository;
+use InventorySystem\Adapter\Symfony\Web\Request\AddProductRequestWeb;
 use InventorySystem\Adapter\Symfony\Web\ViewModel\AddedProduct;
 use InventorySystem\UseCase\Product\AddProduct;
 use InventorySystem\UseCase\Product\CountProducts;
@@ -28,13 +29,9 @@ class AddProductPresenter
 
     public function __invoke(Request $request): Response
     {
-        $data = json_decode($request->getContent(), true);
-        $title = $data['title'] ?? '';
-        $ean = $data['ean'] ?? '';
-
         $addedProduct = new AddedProduct(
             $this->addProductUseCase->__invoke(
-                new AddProductRequestWeb(Uuid::uuid4()->toString(), $title, $ean)
+                AddProductRequestWeb::fromJsonData(Uuid::uuid4()->toString(), $request->getContent())
             )
         );
 
