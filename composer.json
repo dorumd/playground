@@ -1,0 +1,25 @@
+{
+    "name": "dorelmardari/clean-architecture",
+    "description": "Example of Clean Architecture as defined by Robert C. Martin in a PHP project.",
+    "type": "project",
+    "license": "PRIVATE",
+    "authors": [
+        {
+            "name": "Dorel Mardari",
+            "email": "mardari.dorua@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "InventorySystem\\": "src/"
+        }
+    },
+    "require": {
+        "symfony/console": "^4.3",
+        "ramsey/uuid": "^3.8",
+        "symfony/http-foundation": "^4.3",
+        "symfony/http-kernel": "^4.3",
+        "symfony/routing": "^4.3",
+        "ext-json": "*"
+    }
+}

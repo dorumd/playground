@@ -1,0 +1,68 @@
+<table><thead><tr><th>X</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th></tr></thead><tbody><tr><th>1: InventorySystem\Adapter\Storage</th><td>X</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><th>2: InventorySystem\Domain\Model</th><td>1</td><td>X</td><td>1</td><td>1</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><th>3: InventorySystem\Domain\Port</th><td>1</td><td>0</td><td>X</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><th>4: InventorySystem\Adapter\Symfony\Web\ViewModel</th><td>0</td><td>0</td><td>0</td><td>X</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><th>5: InventorySystem\Adapter\Symfony\Web\Presenter</th><td>0</td><td>0</td><td>0</td><td>0</td><td>X</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><th>6: InventorySystem\UseCase\Product</th><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>X</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><th>7: Ramsey\Uuid</th><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>X</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><th>8: Symfony\Component\HttpFoundation</th><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>0</td><td>0</td><td>X</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><th>9: InventorySystem\Adapter\Symfony\Cli</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>X</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><th>10: InventorySystem\Adapter\Symfony</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>X</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><th>11: InventorySystem\usecase\Product</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>X</td><td>0</td><td>0</td><td>0</td></tr><tr><th>12: Symfony\Component\Console\Command</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>X</td><td>0</td><td>0</td></tr><tr><th>13: Symfony\Component\Console\Input</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>X</td><td>0</td></tr><tr><th>14: Symfony\Component\Console\Output</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>X</td></tr></tbody></table><script>
+['forEach', 'map', 'filter', 'reduce', 'reduceRight', 'every', 'some'].forEach(
+    function(p) {
+    NodeList.prototype[p] = HTMLCollection.prototype[p] = Array.prototype[p];
+});
+document.getElementsByTagName('td').forEach(x => (x.innerText === '0' || x.innerText === 'X') && (x.style.color = 'lightgray'));
+            const max = document.getElementsByTagName('td').map(x => x.innerText === 'X' ? 0 : parseInt(x.innerText, 10)).reduce((prev, cur) => prev > cur ? prev : cur);
+            document.getElementsByTagName('td').forEach(x => x.innerText !== '0' && x.innerText !== 'X' && (x.className += ' weight-'+ Math.ceil(x.innerText / (max/10))));
+            </script>
+            <style>
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid #333; 
+}
+
+td, th {
+    vertical-align: middle; 
+    height: 20px;
+}
+
+td { 
+    width: 20px;
+    text-align: center;
+}
+
+.weight-1 {
+	background-color: #ffffff;
+}
+
+.weight-2 {
+	background-color: #ffffe6;
+}
+
+.weight-3 {
+	background-color: #ffffcc;
+}
+
+.weight-4 {
+	background-color: #ffffb3;
+}
+
+.weight-5 {
+	background-color: #ffff99;
+}
+
+.weight-6 {
+	background-color: #ffff80;
+}
+
+.weight-7 {
+	background-color: #ffff66;
+}
+
+.weight-8 {
+	background-color: #ffff4d;
+}
+
+.weight-9 {
+	background-color: #ffff33;
+}
+
+.weight-10 {
+	background-color: #ffff1a;
+}
+            </style>

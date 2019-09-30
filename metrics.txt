@@ -1,0 +1,22 @@
++--------------------+-------+
+| Classes:           | 10    |
+| Abstract classes:  | 0     |
+| Interfaces:        | 1     |
+| Traits:            | 0     |
+| Abstractness:      | 0.091 |
++--------------------+-------+
++---------------------------------------------------------------------+-------------------+-------------------+-------------+
+|                                                                     | Afferent Coupling | Efferent Coupling | Instability |
++---------------------------------------------------------------------+-------------------+-------------------+-------------+
+| InventorySystem\Adapter\Storage\InMemoryProductRepository           | 3                 | 2                 | 0.40        |
+| InventorySystem\Adapter\Symfony\Web\ViewModel\AddedProduct          | 1                 | 1                 | 0.50        |
+| InventorySystem\Adapter\Symfony\Web\Presenter\AddProductPresenter   | 0                 | 8                 | 1.00        |
+| InventorySystem\Adapter\Symfony\Web\Presenter\AddProductRequestWeb  | 2                 | 1                 | 0.33        |
+| InventorySystem\Adapter\Symfony\Web\Presenter\ViewProductsPresenter | 0                 | 7                 | 1.00        |
+| InventorySystem\Adapter\Symfony\Cli\AddProductRequestCli            | 1                 | 1                 | 0.50        |
+| InventorySystem\Adapter\Symfony\Cli\ImportProductsCommand           | 0                 | 9                 | 1.00        |
+| InventorySystem\UseCase\Product\CountProducts                       | 2                 | 1                 | 0.33        |
+| InventorySystem\UseCase\Product\AddProduct                          | 3                 | 4                 | 0.57        |
+| InventorySystem\Domain\Model\Product                                | 4                 | 1                 | 0.20        |
+| InventorySystem\Domain\Port\ProductRepository                       | 3                 | 1                 | 0.25        |
++---------------------------------------------------------------------+-------------------+-------------------+-------------+
