@@ -1,22 +1,28 @@
 +--------------------+-------+
-| Classes:           | 10    |
+| Classes:           | 15    |
 | Abstract classes:  | 0     |
-| Interfaces:        | 1     |
+| Interfaces:        | 2     |
 | Traits:            | 0     |
-| Abstractness:      | 0.091 |
+| Abstractness:      | 0.118 |
 +--------------------+-------+
 +---------------------------------------------------------------------+-------------------+-------------------+-------------+
 |                                                                     | Afferent Coupling | Efferent Coupling | Instability |
 +---------------------------------------------------------------------+-------------------+-------------------+-------------+
-| InventorySystem\Adapter\Storage\InMemoryProductRepository           | 3                 | 2                 | 0.40        |
+| InventorySystem\Adapter\Storage\InMemoryProductStockRepository      | 1                 | 2                 | 0.67        |
+| InventorySystem\Adapter\Storage\InMemoryProductRepository           | 4                 | 2                 | 0.33        |
 | InventorySystem\Adapter\Symfony\Web\ViewModel\AddedProduct          | 1                 | 1                 | 0.50        |
 | InventorySystem\Adapter\Symfony\Web\Presenter\AddProductPresenter   | 0                 | 8                 | 1.00        |
-| InventorySystem\Adapter\Symfony\Web\Presenter\AddProductRequestWeb  | 2                 | 1                 | 0.33        |
 | InventorySystem\Adapter\Symfony\Web\Presenter\ViewProductsPresenter | 0                 | 7                 | 1.00        |
+| InventorySystem\Adapter\Symfony\Web\Request\AddProductRequestWeb    | 1                 | 1                 | 0.50        |
+| InventorySystem\Adapter\Symfony\Cli\AddStockRequestCli              | 1                 | 1                 | 0.50        |
+| InventorySystem\Adapter\Symfony\Cli\UpdateStockForProductsCommand   | 0                 | 9                 | 1.00        |
 | InventorySystem\Adapter\Symfony\Cli\AddProductRequestCli            | 1                 | 1                 | 0.50        |
 | InventorySystem\Adapter\Symfony\Cli\ImportProductsCommand           | 0                 | 9                 | 1.00        |
+| InventorySystem\UseCase\Product\AddStock                            | 1                 | 6                 | 0.86        |
 | InventorySystem\UseCase\Product\CountProducts                       | 2                 | 1                 | 0.33        |
 | InventorySystem\UseCase\Product\AddProduct                          | 3                 | 4                 | 0.57        |
 | InventorySystem\Domain\Model\Product                                | 4                 | 1                 | 0.20        |
-| InventorySystem\Domain\Port\ProductRepository                       | 3                 | 1                 | 0.25        |
+| InventorySystem\Domain\Model\ProductStock                           | 3                 | 1                 | 0.25        |
+| InventorySystem\Domain\Port\ProductRepository                       | 4                 | 1                 | 0.20        |
+| InventorySystem\Domain\Port\ProductStockRepository                  | 2                 | 1                 | 0.33        |
 +---------------------------------------------------------------------+-------------------+-------------------+-------------+
