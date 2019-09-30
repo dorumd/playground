@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace InventorySystem\Adapter\Symfony\Cli;
 
 use InventorySystem\Adapter\Storage\InMemoryProductRepository;
-use InventorySystem\Adapter\Symfony\ProductsGoogleSpreadsheet;
 use InventorySystem\UseCase\Product\AddProduct;
 use InventorySystem\usecase\Product\CountProducts;
 use Ramsey\Uuid\Uuid;

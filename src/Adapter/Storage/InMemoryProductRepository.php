@@ -13,9 +13,14 @@ class InMemoryProductRepository implements ProductRepository
      */
     private $products = [];
 
+    public function findById(string $productId): ?Product
+    {
+        return $this->products[$productId] ?? null;
+    }
+
     public function store(Product $product): void
     {
-        $this->products[] = $product;
+        $this->products[$product->getProductId()->toString()] = $product;
     }
 
     public function count(): int
